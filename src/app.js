@@ -51,8 +51,48 @@ function refreshWeather(response) {
   
     searchCity(searchInput.value);
   }
+
+  function displayForecast() {
+    
+    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = "";
+    days.forEach(function (day) {
+      forecastHtml =
+      forecastHtml +
+      `
+      <div class="Row">
+      <div class="Col-2">
+        <div class="weather-forecast-day"></div>
+        <div class="weather-forecast-date">
+Tue
+</div>
+<img
+src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-64.png" 
+alt="" width="42px"
+/>
+<div class="Weather-Forecast-Temperature">
+<span class="Weather-Forecast-Temperature-Max">
+18° 
+</span>
+<span class="Weather-Forecast-Temperature-Min">
+12°
+</span>
+</div>
+      </div>
+    </div>
+      
+      `;
+
+    });
+
+    let forecastElement = document.querrySelector("#forecast");
+forecastElement.innerHtml = forecastHtml;
+  }
   
   let searchFormElement = document.querySelector("#search-form");
   searchFormElement.addEventListener("submit", handleSearchSubmit);
   
   searchCity("Paris");
+  displayForecast();
+
+  
