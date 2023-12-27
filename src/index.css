@@ -86,28 +86,34 @@ body {
    font-size: 28px;
  }
  
- footer {
-   border-top: 1px solid #f9f7fe;
-   padding: 30px 0 0 0;
-   text-align: center;
-   font-size: 14px;
-   color: rgba(0, 0, 0, 0.6);
- }
- .Weather-Forecast {
-  margin-top: 20px;
-  text-align: center;
-  color: #000;
- }
- .weather-forecast-date {
+ 
+ .weather-forecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+
+.weather-forecast-date {
+  color: rgba(0, 0, 0, 0.75);
   font-size: 16px;
- opacity: 0.5;
+  padding: 0 0 5px 0;
+}
 
- }
-
- .Weather-Forecast-Temperature-Min {
-  opacity: 0.5;
- }
- .Weather-Forecast-Temperature {
+.weather-forecast-temperature {
   font-size: 13px;
- }
+}
+
+.weather-forecast-temperature-min {
+  color: rgba(0, 0, 0, 0.75);
+}
+ footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
  
