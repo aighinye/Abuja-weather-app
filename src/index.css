@@ -98,6 +98,8 @@ body {
 .weather-forecast-icon {
     width: 88px;
     height: 88px;
+    display: block;
+    margin: 0 auto;
   }
 .weather-forecast-date {
   color: rgba(0, 0, 0, 0.75);
